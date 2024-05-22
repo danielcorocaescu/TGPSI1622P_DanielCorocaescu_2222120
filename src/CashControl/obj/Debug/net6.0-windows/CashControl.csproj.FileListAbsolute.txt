@@ -16,3 +16,7 @@ C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaes
 C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.pdb
 C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.genruntimeconfig.cache
 C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\ref\CashControl.dll
+C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.Expenses.resources
+C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.Income.resources
+C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.ViewIncome.resources
+C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.ViewExpenses.resources

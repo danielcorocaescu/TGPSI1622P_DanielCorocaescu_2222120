@@ -4,5 +4,17 @@
     <Compile Update="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Income.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

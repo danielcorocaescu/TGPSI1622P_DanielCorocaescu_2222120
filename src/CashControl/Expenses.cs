@@ -7,53 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
-
 
 namespace CashControl
 {
-    public partial class Dashboard : Form
+    public partial class Expenses : Form
     {
-        public Dashboard()
+        public Expenses()
         {
             InitializeComponent();
         }
 
-        
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
-
+            Dashboard dashboardd = new Dashboard();
+            dashboardd.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            // Cria uma nova instância do Income
             Income incomeForm = new Income();
-            // Mostra o Income
             incomeForm.Show();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            Expenses expense = new Expenses();
-            expense.Show();
         }
 
         private void label4_Click(object sender, EventArgs e)
