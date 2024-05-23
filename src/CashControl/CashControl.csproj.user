@@ -10,6 +10,12 @@
     <Compile Update="Income.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Loginn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ViewExpenses.cs">
       <SubType>Form</SubType>
     </Compile>
