@@ -21,5 +21,16 @@ namespace CashControl
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterUser Register = new RegisterUser();
+            Register.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

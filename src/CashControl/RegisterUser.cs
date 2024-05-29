@@ -21,5 +21,23 @@ namespace CashControl
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Loginn LoginForm = new Loginn();
+            LoginForm.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string username;
+            username = Console.ReadLine();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string password;
+            password = Console.ReadLine();
+        }
     }
 }

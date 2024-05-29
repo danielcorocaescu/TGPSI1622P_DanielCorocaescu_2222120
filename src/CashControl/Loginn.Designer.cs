@@ -42,14 +42,15 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(58, 107);
+            textBox1.Location = new Point(63, 126);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 23);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(58, 136);
+            textBox2.Location = new Point(63, 155);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(138, 23);
             textBox2.TabIndex = 1;
@@ -57,7 +58,7 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(90, 38);
+            pictureBox1.Location = new Point(92, 42);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(65, 63);
             pictureBox1.TabIndex = 2;
@@ -69,7 +70,7 @@
             pictureBox2.BackColor = Color.MediumPurple;
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(22, 136);
+            pictureBox2.Location = new Point(27, 155);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 23);
             pictureBox2.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(22, 107);
+            pictureBox3.Location = new Point(27, 126);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(30, 23);
             pictureBox3.TabIndex = 4;
@@ -89,19 +90,20 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.Purple;
-            linkLabel1.Location = new Point(12, 162);
+            linkLabel1.Location = new Point(17, 190);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(205, 15);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Don´t have an account? Register now!";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // Loginn
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumPurple;
-            ClientSize = new Size(243, 334);
+            ClientSize = new Size(243, 372);
             Controls.Add(linkLabel1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
