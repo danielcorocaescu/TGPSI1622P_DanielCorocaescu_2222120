@@ -49,6 +49,8 @@
             pictureBox8 = new PictureBox();
             label9 = new Label();
             label7 = new Label();
+            pictureBox9 = new PictureBox();
+            label10 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -60,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -221,7 +224,7 @@
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
             pictureBox7.Location = new Point(258, 11);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(73, 85);
+            pictureBox7.Size = new Size(73, 68);
             pictureBox7.TabIndex = 5;
             pictureBox7.TabStop = false;
             // 
@@ -265,7 +268,7 @@
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(258, 31);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(73, 85);
+            pictureBox8.Size = new Size(73, 74);
             pictureBox8.TabIndex = 6;
             pictureBox8.TabStop = false;
             // 
@@ -291,12 +294,35 @@
             label7.TabIndex = 4;
             label7.Text = "Total Expenses";
             // 
+            // pictureBox9
+            // 
+            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox9.Location = new Point(268, 12);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(45, 40);
+            pictureBox9.TabIndex = 4;
+            pictureBox9.TabStop = false;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label10.ForeColor = Color.MediumPurple;
+            label10.Location = new Point(319, 22);
+            label10.Name = "label10";
+            label10.Size = new Size(135, 21);
+            label10.TabIndex = 5;
+            label10.Text = "danielcorocaescu";
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(1245, 665);
+            Controls.Add(label10);
+            Controls.Add(pictureBox9);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -319,7 +345,9 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -344,5 +372,7 @@
         private Label label7;
         private PictureBox pictureBox7;
         private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
+        private Label label10;
     }
 }
