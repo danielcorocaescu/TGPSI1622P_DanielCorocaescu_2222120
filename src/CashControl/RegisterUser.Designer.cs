@@ -42,12 +42,14 @@
             pictureBox6 = new PictureBox();
             textBox5 = new TextBox();
             button1 = new Button();
+            pictureBox10 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // linkLabel1
@@ -177,12 +179,25 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(263, 2);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(43, 40);
+            pictureBox10.TabIndex = 22;
+            pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
+            // 
             // RegisterUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumPurple;
             ClientSize = new Size(307, 446);
+            Controls.Add(pictureBox10);
             Controls.Add(button1);
             Controls.Add(textBox5);
             Controls.Add(pictureBox6);
@@ -196,6 +211,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "RegisterUser";
             Text = "CashControl";
             Load += RegisterUser_Load;
@@ -205,6 +221,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,5 +241,6 @@
         private PictureBox pictureBox6;
         private TextBox textBox5;
         private Button button1;
+        private PictureBox pictureBox10;
     }
 }

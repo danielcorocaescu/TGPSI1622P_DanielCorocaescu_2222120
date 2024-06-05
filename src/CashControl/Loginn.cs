@@ -70,7 +70,7 @@ namespace CashControl
                     {
                         // Login bem-sucedido, abre o dashboard
                         MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Dashboard dashboard = new Dashboard(); // Certifique-se de ter um formulário Dashboard criado
+                        Dashboard dashboard = new Dashboard(); 
                         dashboard.Show();
                         this.Hide();
                     }
@@ -91,6 +91,11 @@ namespace CashControl
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

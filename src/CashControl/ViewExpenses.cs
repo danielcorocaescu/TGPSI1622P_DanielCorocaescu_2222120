@@ -40,5 +40,20 @@ namespace CashControl
             Expenses expensess = new Expenses();
             expensess.Show();
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,9 +36,11 @@
             pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox1 = new TextBox();
+            pictureBox10 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // linkLabel1
@@ -111,12 +113,26 @@
             textBox1.TabIndex = 22;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(264, -1);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(43, 40);
+            pictureBox10.TabIndex = 28;
+            pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
+            // 
             // Loginn
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumPurple;
             ClientSize = new Size(307, 446);
+            Controls.Add(pictureBox10);
             Controls.Add(button1);
             Controls.Add(textBox5);
             Controls.Add(pictureBox6);
@@ -124,12 +140,15 @@
             Controls.Add(pictureBox1);
             Controls.Add(textBox1);
             Controls.Add(linkLabel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Loginn";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CashControl";
             Load += Loginn_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -142,5 +161,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
         private TextBox textBox1;
+        private PictureBox pictureBox10;
     }
 }

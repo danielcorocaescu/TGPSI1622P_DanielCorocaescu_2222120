@@ -51,6 +51,7 @@
             label7 = new Label();
             pictureBox9 = new PictureBox();
             label10 = new Label();
+            pictureBox10 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -63,6 +64,7 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -315,12 +317,25 @@
             label10.TabIndex = 5;
             label10.Text = "danielcorocaescu";
             // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(1190, 12);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(43, 40);
+            pictureBox10.TabIndex = 6;
+            pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(1245, 665);
+            Controls.Add(pictureBox10);
             Controls.Add(label10);
             Controls.Add(pictureBox9);
             Controls.Add(panel3);
@@ -329,6 +344,7 @@
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
             Load += Dashboard_Load;
             panel1.ResumeLayout(false);
@@ -346,6 +362,7 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -374,5 +391,6 @@
         private PictureBox pictureBox8;
         private PictureBox pictureBox9;
         private Label label10;
+        private PictureBox pictureBox10;
     }
 }

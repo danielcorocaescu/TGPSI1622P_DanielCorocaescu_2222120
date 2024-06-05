@@ -44,10 +44,10 @@ namespace CashControl
 
         private void label2_Click(object sender, EventArgs e)
         {
-            // Cria uma nova instância do Income
+            
             Income incomeForm = new Income();
-            // Mostra o Income
             incomeForm.Show();
+            this.Close();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace CashControl
         {
             ViewExpenses ViewExpensess = new ViewExpenses();
             ViewExpensess.Show();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

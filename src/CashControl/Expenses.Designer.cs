@@ -51,6 +51,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            pictureBox10 = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -77,6 +79,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(814, 513);
             panel2.TabIndex = 13;
+            panel2.Paint += panel2_Paint;
             // 
             // button1
             // 
@@ -90,6 +93,7 @@
             button1.TabIndex = 13;
             button1.Text = "Register";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // dateTimePicker1
             // 
@@ -97,6 +101,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(206, 23);
             dateTimePicker1.TabIndex = 12;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label9
             // 
@@ -116,6 +121,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(206, 23);
             comboBox1.TabIndex = 10;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -135,6 +141,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(206, 23);
             textBox2.TabIndex = 8;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label7
             // 
@@ -154,6 +161,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(206, 23);
             textBox1.TabIndex = 6;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label6
             // 
@@ -305,16 +313,30 @@
             panel1.Size = new Size(223, 666);
             panel1.TabIndex = 12;
             // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(1190, 12);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(43, 40);
+            pictureBox10.TabIndex = 14;
+            pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
+            // 
             // Expenses
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SlateBlue;
+            BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(1245, 665);
+            Controls.Add(pictureBox10);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Expenses";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Expenses";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -326,6 +348,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -353,5 +376,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Panel panel1;
+        private PictureBox pictureBox10;
     }
 }

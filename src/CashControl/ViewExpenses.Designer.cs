@@ -47,6 +47,7 @@
             textBox1 = new TextBox();
             label6 = new Label();
             dataGridView1 = new DataGridView();
+            pictureBox10 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -56,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -217,6 +219,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(206, 23);
             comboBox1.TabIndex = 14;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -236,6 +239,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(206, 23);
             textBox1.TabIndex = 12;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label6
             // 
@@ -258,12 +262,25 @@
             dataGridView1.Size = new Size(834, 372);
             dataGridView1.TabIndex = 3;
             // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
+            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(1190, 12);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(43, 40);
+            pictureBox10.TabIndex = 23;
+            pictureBox10.TabStop = false;
+            pictureBox10.Click += pictureBox10_Click;
+            // 
             // ViewExpenses
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(1245, 625);
+            Controls.Add(pictureBox10);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -280,6 +297,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -303,5 +321,6 @@
         private TextBox textBox1;
         private Label label6;
         private DataGridView dataGridView1;
+        private PictureBox pictureBox10;
     }
 }
