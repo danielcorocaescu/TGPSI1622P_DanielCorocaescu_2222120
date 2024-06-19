@@ -13,9 +13,11 @@ namespace CashControl
 {
     public partial class Expenses : Form
     {
+        
         public Expenses()
         {
             InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -121,6 +123,11 @@ namespace CashControl
                     MessageBox.Show($"Erro ao registrar o income: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Expenses_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

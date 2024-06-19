@@ -142,7 +142,7 @@
             Controls.Add(linkLabel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Loginn";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "CashControl";
             Load += Loginn_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

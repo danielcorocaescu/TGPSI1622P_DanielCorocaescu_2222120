@@ -13,6 +13,7 @@ namespace CashControl
 {
     public partial class Income : Form
     {
+
         public Income()
         {
             InitializeComponent();
@@ -102,6 +103,8 @@ namespace CashControl
 
         }
 
+       
+
         private void button1_Click(object sender, EventArgs e)
         {
             string incomeName = textBox1.Text; // Nome do campo correspondente ao nome do rendimento
@@ -130,13 +133,17 @@ namespace CashControl
                 try
                 {
                     // Inserir na tabela Income
-                    string insertIncomeQuery = "INSERT INTO Income (IncomeName, IncomeAmount, IncomeCategory, IncomeDate) VALUES (@IncomeName, @IncomeAmount, @IncomeCategory, @IncomeDate)";
+                   
+                    string insertIncomeQuery = "INSERT INTO Income (IncomeName, IncomeAmount, IncomeCategory, IncomeDate, IncomeUser) VALUES (@IncomeName, @IncomeAmount, @IncomeCategory, @IncomeDate, @IncomeUser)";
+                    
                     using (SqlCommand cmd = new SqlCommand(insertIncomeQuery, conn, transaction))
                     {
                         cmd.Parameters.AddWithValue("@IncomeName", incomeName);
                         cmd.Parameters.AddWithValue("@IncomeAmount", incomeAmount);
                         cmd.Parameters.AddWithValue("@IncomeCategory", incomeCategory);
                         cmd.Parameters.AddWithValue("@IncomeDate", incomeDate);
+                        cmd.Parameters.AddWithValue("@IncomeUser",);
+                        
                         cmd.ExecuteNonQuery();
                     }
 

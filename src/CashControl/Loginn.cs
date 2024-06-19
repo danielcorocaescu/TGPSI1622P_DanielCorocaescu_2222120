@@ -68,10 +68,10 @@ namespace CashControl
 
                     if (count > 0)
                     {
-                        // Login bem-sucedido, abre o dashboard
+                        // Login bem-sucedido, abre o dashboard e passa o loginUser
                         MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Dashboard dashboard = new Dashboard(); 
-                        dashboard.Show();
+                        Income incomeForm = new Income(loginUser);
+                        incomeForm.Show();
                         this.Hide();
                     }
                     else

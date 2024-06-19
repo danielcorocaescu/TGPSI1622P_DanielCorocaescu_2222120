@@ -42,16 +42,21 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            label12 = new Label();
+            label11 = new Label();
             pictureBox7 = new PictureBox();
             label8 = new Label();
             label6 = new Label();
             panel3 = new Panel();
+            label13 = new Label();
+            label14 = new Label();
             pictureBox8 = new PictureBox();
             label9 = new Label();
             label7 = new Label();
             pictureBox9 = new PictureBox();
             label10 = new Label();
             pictureBox10 = new PictureBox();
+            label15 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -71,6 +76,7 @@
             // 
             panel1.BackColor = Color.LightGray;
             panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(label15);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(label4);
@@ -211,6 +217,8 @@
             // panel2
             // 
             panel2.BackColor = Color.MediumPurple;
+            panel2.Controls.Add(label12);
+            panel2.Controls.Add(label11);
             panel2.Controls.Add(pictureBox7);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label6);
@@ -219,14 +227,34 @@
             panel2.Size = new Size(344, 168);
             panel2.TabIndex = 1;
             // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(34, 100);
+            label12.Margin = new Padding(2, 0, 2, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(51, 15);
+            label12.TabIndex = 7;
+            label12.Text = "Number";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(34, 41);
+            label11.Margin = new Padding(2, 0, 2, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(51, 15);
+            label11.TabIndex = 6;
+            label11.Text = "Amount";
+            // 
             // pictureBox7
             // 
             pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
             pictureBox7.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(258, 11);
+            pictureBox7.Location = new Point(275, 11);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(73, 68);
+            pictureBox7.Size = new Size(56, 44);
             pictureBox7.TabIndex = 5;
             pictureBox7.TabStop = false;
             // 
@@ -255,6 +283,8 @@
             // panel3
             // 
             panel3.BackColor = Color.MediumPurple;
+            panel3.Controls.Add(label13);
+            panel3.Controls.Add(label14);
             panel3.Controls.Add(pictureBox8);
             panel3.Controls.Add(label9);
             panel3.Controls.Add(label7);
@@ -263,14 +293,34 @@
             panel3.Size = new Size(344, 168);
             panel3.TabIndex = 2;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(34, 42);
+            label13.Margin = new Padding(2, 0, 2, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(51, 15);
+            label13.TabIndex = 8;
+            label13.Text = "Amount";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(34, 109);
+            label14.Margin = new Padding(2, 0, 2, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(51, 15);
+            label14.TabIndex = 9;
+            label14.Text = "Number";
+            // 
             // pictureBox8
             // 
             pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
             pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(258, 31);
+            pictureBox8.Location = new Point(275, 13);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(73, 74);
+            pictureBox8.Size = new Size(56, 44);
             pictureBox8.TabIndex = 6;
             pictureBox8.TabStop = false;
             // 
@@ -329,12 +379,24 @@
             pictureBox10.TabStop = false;
             pictureBox10.Click += pictureBox10_Click;
             // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label15.ForeColor = Color.DarkOrchid;
+            label15.Location = new Point(58, 576);
+            label15.Name = "label15";
+            label15.Size = new Size(162, 30);
+            label15.TabIndex = 11;
+            label15.Text = "View Expenses";
+            label15.Click += label15_Click;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(1245, 665);
+            ClientSize = new Size(1245, 660);
             Controls.Add(pictureBox10);
             Controls.Add(label10);
             Controls.Add(pictureBox9);
@@ -392,5 +454,10 @@
         private PictureBox pictureBox9;
         private Label label10;
         private PictureBox pictureBox10;
+        private Label label12;
+        private Label label11;
+        private Label label13;
+        private Label label14;
+        private Label label15;
     }
 }

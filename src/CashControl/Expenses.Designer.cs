@@ -338,6 +338,7 @@
             Name = "Expenses";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Expenses";
+            Load += Expenses_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

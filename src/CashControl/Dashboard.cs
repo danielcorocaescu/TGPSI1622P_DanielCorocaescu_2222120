@@ -44,7 +44,7 @@ namespace CashControl
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
             Income incomeForm = new Income();
             incomeForm.Show();
             this.Close();
@@ -71,6 +71,11 @@ namespace CashControl
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
