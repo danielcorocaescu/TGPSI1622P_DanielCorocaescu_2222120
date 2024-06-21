@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-
-
+using System.Diagnostics;
 
 namespace CashControl
 {
@@ -20,19 +18,7 @@ namespace CashControl
             InitializeComponent();
         }
 
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
@@ -44,38 +30,40 @@ namespace CashControl
 
         private void label2_Click(object sender, EventArgs e)
         {
-
-            Income incomeForm = new Income();
-            incomeForm.Show();
-            this.Close();
+            Income Incomee = new Income();
+            Incomee.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Expenses expense = new Expenses();
-            expense.Show();
+            Expenses expenses = new Expenses();
+            expenses.Show();
+            this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            ViewIncome ViewIncomee = new ViewIncome();
-            ViewIncomee.Show();
+            ViewIncome viewIncome = new ViewIncome();
+            viewIncome.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            ViewExpenses ViewExpensess = new ViewExpenses();
-            ViewExpensess.Show();
+            ViewExpenses viewExpenses = new ViewExpenses();
+            viewExpenses.Show();
+            this.Hide();
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            Process.Start("https://github.com/danielcorocaescu");
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void Dashboard_Load(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

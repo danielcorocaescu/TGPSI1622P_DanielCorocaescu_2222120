@@ -101,6 +101,7 @@
             pictureBox6.Size = new Size(55, 49);
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // label4
             // 
@@ -123,6 +124,7 @@
             pictureBox5.Size = new Size(55, 49);
             pictureBox5.TabIndex = 7;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
@@ -133,6 +135,7 @@
             pictureBox4.Size = new Size(55, 49);
             pictureBox4.TabIndex = 6;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // label3
             // 
@@ -167,6 +170,7 @@
             pictureBox3.Size = new Size(55, 49);
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // label1
             // 
@@ -189,6 +193,7 @@
             pictureBox2.Size = new Size(55, 49);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -199,6 +204,7 @@
             pictureBox1.Size = new Size(153, 109);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // dataGridView1
             // 
@@ -289,6 +295,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewIncome";
             Text = "ViewIncome";
+            Load += ViewIncome_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

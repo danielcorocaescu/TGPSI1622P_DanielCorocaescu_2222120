@@ -8,40 +8,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CashControl
 {
     public partial class Expenses : Form
     {
-        
+
         public Expenses()
         {
             InitializeComponent();
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             Dashboard dashboardd = new Dashboard();
             dashboardd.Show();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             Income incomeForm = new Income();
             incomeForm.Show();
+            this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             ViewIncome ViewIncomee = new ViewIncome();
             ViewIncomee.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             ViewExpenses ViewExpensess = new ViewExpenses();
             ViewExpensess.Show();
+            this.Hide();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -102,13 +107,14 @@ namespace CashControl
                 try
                 {
                     // Inserir na tabela Income
-                    string insertIncomeQuery = "INSERT INTO Income (IncomeName, IncomeAmount, IncomeCategory, IncomeDate) VALUES (@IncomeName, @IncomeAmount, @IncomeCategory, @IncomeDate)";
-                    using (SqlCommand cmd = new SqlCommand(insertIncomeQuery, conn, transaction))
+                    string insertExpensesQuery = "INSERT INTO Income (ExpenseName, ExpenseAmount, ExpenseCategory, ExpenseDate, ExpenseUser) VALUES (@IncomeName, @IncomeAmount, @IncomeCategory, @IncomeDate)";
+                    using (SqlCommand cmd = new SqlCommand(insertExpensesQuery, conn, transaction))
                     {
                         cmd.Parameters.AddWithValue("@ExpenseName", ExpenseName);
                         cmd.Parameters.AddWithValue("@ExpenseAmount", ExpenseAmount);
                         cmd.Parameters.AddWithValue("@ExpenseCategory", ExpenseCategory);
                         cmd.Parameters.AddWithValue("@ExpenseDate", ExpenseDate);
+                        cmd.Parameters.AddWithValue("@ExpenseUser", Loginn.loginUser);
                         cmd.ExecuteNonQuery();
                     }
 
@@ -128,6 +134,35 @@ namespace CashControl
         private void Expenses_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
         }
     }
 }

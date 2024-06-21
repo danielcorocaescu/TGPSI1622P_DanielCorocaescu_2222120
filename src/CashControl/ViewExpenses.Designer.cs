@@ -211,6 +211,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(920, 488);
             panel2.TabIndex = 5;
+            panel2.Paint += panel2_Paint;
             // 
             // comboBox1
             // 
@@ -261,6 +262,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(834, 372);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // pictureBox10
             // 
@@ -286,6 +288,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewExpenses";
             Text = "ViewExpenses";
+            Load += ViewExpenses_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

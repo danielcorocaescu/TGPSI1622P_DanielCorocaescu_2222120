@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CashControl
 {
@@ -33,24 +34,19 @@ namespace CashControl
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                try
+                conn.Open();
+
+                string query = "SELECT IncomeName, IncomeAmount, IncomeCategory, IncomeDate FROM Income WHERE IncomeUser = @LoginUser";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    conn.Open();
+                    cmd.Parameters.AddWithValue("@LoginUser", Loginn.loginUser);
 
-                    // Selecionar todos os dados da tabela Income
-                    string selectIncomeQuery = "SELECT IncomeName, IncomeAmount, IncomeCategory, IncomeDate FROM Income";
-                    SqlDataAdapter dataAdapter = new SqlDataAdapter(selectIncomeQuery, conn);
-
-                    // Criar um DataTable para armazenar os dados
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
 
-                    // Atribuir o DataTable ao DataGridView
                     dataGridView1.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Erro ao carregar os dados do income: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -59,6 +55,7 @@ namespace CashControl
         {
             Income incomeform = new Income();
             incomeform.Show();
+            this.Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -70,18 +67,21 @@ namespace CashControl
         {
             Dashboard dashboardd = new Dashboard();
             dashboardd.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
             Expenses expensess = new Expenses();
             expensess.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             ViewExpenses ViewExpensess = new ViewExpenses();
             ViewExpensess.Show();
+            this.Hide();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -101,8 +101,38 @@ namespace CashControl
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
+
+
+        }
+
+        private void ViewIncome_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
         }
     }
 }

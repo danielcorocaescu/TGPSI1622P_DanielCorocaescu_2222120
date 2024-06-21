@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CashControl
 {
     public partial class Income : Form
     {
-
+       
         public Income()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace CashControl
         {
             Dashboard dashboardd = new Dashboard();
             dashboardd.Show();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -60,17 +62,20 @@ namespace CashControl
         {
             Expenses expense = new Expenses();
             expense.Show();
+            this.Hide();
         }
         private void label4_Click(object sender, EventArgs e)
         {
             ViewIncome ViewIncomee = new ViewIncome();
             ViewIncomee.Show();
+            this.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             ViewExpenses ViewExpensess = new ViewExpenses();
             ViewExpensess.Show();
+            this.Hide();
         }
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -107,6 +112,7 @@ namespace CashControl
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Loginn Login = new Loginn();
             string incomeName = textBox1.Text; // Nome do campo correspondente ao nome do rendimento
             decimal incomeAmount;
             string incomeCategory = comboBox1.SelectedItem?.ToString(); // Combobox para a categoria do rendimento
@@ -142,7 +148,7 @@ namespace CashControl
                         cmd.Parameters.AddWithValue("@IncomeAmount", incomeAmount);
                         cmd.Parameters.AddWithValue("@IncomeCategory", incomeCategory);
                         cmd.Parameters.AddWithValue("@IncomeDate", incomeDate);
-                        cmd.Parameters.AddWithValue("@IncomeUser",);
+                        cmd.Parameters.AddWithValue("@IncomeUser",Loginn.loginUser);
                         
                         cmd.ExecuteNonQuery();
                     }

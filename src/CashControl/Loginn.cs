@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CashControl
 {
@@ -39,9 +40,10 @@ namespace CashControl
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public static string loginUser;
+        public void button1_Click(object sender, EventArgs e)
         {
-            string loginUser = textBox1.Text;
+            loginUser = textBox1.Text;
             string loginPassword = textBox5.Text;
 
             // Verificar se todos os campos estão preenchidos
@@ -70,7 +72,7 @@ namespace CashControl
                     {
                         // Login bem-sucedido, abre o dashboard e passa o loginUser
                         MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Income incomeForm = new Income(loginUser);
+                        Income incomeForm = new Income();
                         incomeForm.Show();
                         this.Hide();
                     }
