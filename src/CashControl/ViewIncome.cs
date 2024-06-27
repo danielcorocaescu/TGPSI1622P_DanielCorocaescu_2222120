@@ -84,11 +84,6 @@ namespace CashControl
             this.Hide();
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -133,6 +128,124 @@ namespace CashControl
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Account account = new Account();
+            account.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a row to update.");
+                return;
+            }
+
+            string oldIncomeName = dataGridView1.SelectedRows[0].Cells["IncomeName"].Value.ToString();
+            string newIncomeName = textBox2.Text;
+            string newIncomeCategory = comboBoxEdit1.Text;
+            string newIncomeAmount = textBox4.Text;
+
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CashControl;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "UPDATE Income SET IncomeName = @IncomeName, IncomeCategory = @IncomeCategory, IncomeAmount = @IncomeAmount WHERE IncomeUser = @LoginUser AND IncomeName = @OldIncomeName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@IncomeName", newIncomeName);
+                        cmd.Parameters.AddWithValue("@IncomeCategory", newIncomeCategory);
+                        cmd.Parameters.AddWithValue("@IncomeAmount", newIncomeAmount);
+                        cmd.Parameters.AddWithValue("@LoginUser", Loginn.loginUser);
+                        cmd.Parameters.AddWithValue("@OldIncomeName", oldIncomeName);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Income updated successfully.");
+                            LoadIncomeData(); // Atualiza os dados após a atualização
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error updating income.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating income: " + ex.Message + "\n" + ex.StackTrace);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a row to delete.");
+                return;
+            }
+
+            string IncomeNameToDelete = dataGridView1.SelectedRows[0].Cells["IncomeName"].Value.ToString();
+
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CashControl;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Income WHERE IncomeUser = @LoginUser AND IncomeName = @IncomeName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@LoginUser", Loginn.loginUser);
+                        cmd.Parameters.AddWithValue("@IncomeName", IncomeNameToDelete);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Income deleted successfully.");
+                            LoadIncomeData(); // Atualiza os dados após a exclusão
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error deleting income.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting income: " + ex.Message + "\n" + ex.StackTrace);
+                }
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Income));
             panel1 = new Panel();
+            pictureBox13 = new PictureBox();
             label5 = new Label();
             pictureBox6 = new PictureBox();
             label4 = new Label();
@@ -51,8 +52,9 @@
             label7 = new Label();
             textBox1 = new TextBox();
             label6 = new Label();
-            pictureBox10 = new PictureBox();
+            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -60,13 +62,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
             panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(pictureBox13);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(label4);
@@ -83,6 +85,17 @@
             panel1.Size = new Size(223, 666);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.BackgroundImage = (Image)resources.GetObject("pictureBox13.BackgroundImage");
+            pictureBox13.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox13.Location = new Point(90, 581);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(55, 49);
+            pictureBox13.TabIndex = 13;
+            pictureBox13.TabStop = false;
+            pictureBox13.Click += pictureBox13_Click;
             // 
             // label5
             // 
@@ -264,7 +277,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Sale", "Salary", "Freelancing", "Transfer", "Little Job" });
+            comboBox1.Items.AddRange(new object[] { "Sale", "Salary", "Freelancing", "Transfer", "Little Job", "Rental", "Investment", "Crypto", "Gift", "Pension" });
             comboBox1.Location = new Point(499, 102);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(206, 23);
@@ -322,17 +335,28 @@
             label6.TabIndex = 5;
             label6.Text = "Income name:";
             // 
-            // pictureBox10
+            // nightControlBox1
             // 
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
-            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(1190, 12);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(43, 40);
-            pictureBox10.TabIndex = 12;
-            pictureBox10.TabStop = false;
-            pictureBox10.Click += pictureBox10_Click;
+            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            nightControlBox1.BackColor = Color.Transparent;
+            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
+            nightControlBox1.CloseHoverForeColor = Color.White;
+            nightControlBox1.DefaultLocation = true;
+            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMaximizeButton = true;
+            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMinimizeButton = true;
+            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.Location = new Point(1122, 0);
+            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MaximizeHoverForeColor = Color.White;
+            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MinimizeHoverForeColor = Color.White;
+            nightControlBox1.Name = "nightControlBox1";
+            nightControlBox1.Size = new Size(139, 31);
+            nightControlBox1.TabIndex = 15;
             // 
             // Income
             // 
@@ -340,15 +364,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(1245, 665);
-            Controls.Add(pictureBox10);
+            Controls.Add(nightControlBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Income";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Income";
             Load += Income_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -357,7 +383,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -385,6 +410,7 @@
         private ComboBox comboBox1;
         private Label label8;
         private Button button1;
-        private PictureBox pictureBox10;
+        private PictureBox pictureBox13;
+        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }
 }

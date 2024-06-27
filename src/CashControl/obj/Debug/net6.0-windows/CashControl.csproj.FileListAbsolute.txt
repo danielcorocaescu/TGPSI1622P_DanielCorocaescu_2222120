@@ -78,3 +78,5 @@ C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaes
 C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\bin\Debug\net6.0-windows\System.Text.Json.dll
 C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
 C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\obj\Debug\net6.0-windows\CashControl.Account.resources
+C:\Users\2222120\OneDrive - Escola Digital\Projeto2ano\TGPSI1622P_DanielCorocaescu_2222120\src\CashControl\bin\Debug\net6.0-windows\ReaLTaiizor.dll

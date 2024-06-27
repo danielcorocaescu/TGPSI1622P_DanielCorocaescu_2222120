@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/o7VvKtm/ehFCDpWaFKyosZKotpedMvzH4r1D3DB+AzzMhDIRVoxkpsyWZzzw0sQhXXYcspKA9iawuvpbf3HRQ==",
+  "dgSpecHash": "B/bkilvZ0edbYe563YSdVUNVn6pNto/vs4h/GN8NBRblKH/CEmNaziuTMXI5LoSiKfg5rB/WTY/Eb6zM04aMnA==",
   "success": true,
   "projectFilePath": "C:\\Users\\2222120\\OneDrive - Escola Digital\\Projeto2ano\\TGPSI1622P_DanielCorocaescu_2222120\\src\\CashControl\\CashControl.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\2222120\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
     "C:\\Users\\2222120\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\2222120\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\2222120\\.nuget\\packages\\realtaiizor\\3.8.0.5\\realtaiizor.3.8.0.5.nupkg.sha512",
     "C:\\Users\\2222120\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
     "C:\\Users\\2222120\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\2222120\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

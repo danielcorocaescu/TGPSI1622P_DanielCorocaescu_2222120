@@ -21,7 +21,7 @@ namespace CashControl
 
         private void RegisterUser_Load(object sender, EventArgs e)
         {
-
+            textBox5.UseSystemPasswordChar = true;
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CashControl;Integrated Security=True");
@@ -104,6 +104,9 @@ namespace CashControl
                     // Commitar a transação
                     transaction.Commit();
                     MessageBox.Show("Registro efetuado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Loginn loginn = new Loginn();
+                    loginn.Show();
                 }
                 catch (Exception ex)
                 {
@@ -118,11 +121,6 @@ namespace CashControl
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

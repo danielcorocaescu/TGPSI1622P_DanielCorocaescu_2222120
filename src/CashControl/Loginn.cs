@@ -37,7 +37,7 @@ namespace CashControl
 
         private void Loginn_Load(object sender, EventArgs e)
         {
-
+            textBox5.UseSystemPasswordChar = true;
         }
 
         public static string loginUser;
@@ -72,8 +72,9 @@ namespace CashControl
                     {
                         // Login bem-sucedido, abre o dashboard e passa o loginUser
                         MessageBox.Show("Login bem-sucedido!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.Show();
                         Income incomeForm = new Income();
-                        incomeForm.Show();
                         this.Hide();
                     }
                     else

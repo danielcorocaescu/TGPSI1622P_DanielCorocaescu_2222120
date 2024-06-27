@@ -350,6 +350,14 @@
           }
         }
       },
+      "ReaLTaiizor/3.8.0.5": {
+        "runtime": {
+          "lib/net6.0-windows7.0/ReaLTaiizor.dll": {
+            "assemblyVersion": "3.8.0.5",
+            "fileVersion": "3.8.0.5"
+          }
+        }
+      },
       "RestSharp/110.2.0": {
         "dependencies": {
           "System.Text.Json": "7.0.2"
@@ -1399,6 +1407,13 @@
       "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "ReaLTaiizor/3.8.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l/LKMZXpfBwIEax7ZEXpRNlLmPAENN2OPf5sAYXVecjENvmlGhrgX0YKU72kFsw/Yjuzn+F01jMAAgs2mYsJIg==",
+      "path": "realtaiizor/3.8.0.5",
+      "hashPath": "realtaiizor.3.8.0.5.nupkg.sha512"
     },
     "RestSharp/110.2.0": {
       "type": "package",

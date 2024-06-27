@@ -14,7 +14,7 @@ namespace CashControl
 {
     public partial class Income : Form
     {
-       
+
         public Income()
         {
             InitializeComponent();
@@ -108,7 +108,7 @@ namespace CashControl
 
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -139,17 +139,17 @@ namespace CashControl
                 try
                 {
                     // Inserir na tabela Income
-                   
+
                     string insertIncomeQuery = "INSERT INTO Income (IncomeName, IncomeAmount, IncomeCategory, IncomeDate, IncomeUser) VALUES (@IncomeName, @IncomeAmount, @IncomeCategory, @IncomeDate, @IncomeUser)";
-                    
+
                     using (SqlCommand cmd = new SqlCommand(insertIncomeQuery, conn, transaction))
                     {
                         cmd.Parameters.AddWithValue("@IncomeName", incomeName);
                         cmd.Parameters.AddWithValue("@IncomeAmount", incomeAmount);
                         cmd.Parameters.AddWithValue("@IncomeCategory", incomeCategory);
                         cmd.Parameters.AddWithValue("@IncomeDate", incomeDate);
-                        cmd.Parameters.AddWithValue("@IncomeUser",Loginn.loginUser);
-                        
+                        cmd.Parameters.AddWithValue("@IncomeUser", Loginn.loginUser);
+
                         cmd.ExecuteNonQuery();
                     }
 
@@ -179,6 +179,12 @@ namespace CashControl
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Account account = new Account();
+            account.Show();
         }
     }
 }

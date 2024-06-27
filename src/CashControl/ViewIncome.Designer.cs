@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewIncome));
             panel1 = new Panel();
+            pictureBox13 = new PictureBox();
             label5 = new Label();
             pictureBox6 = new PictureBox();
             label4 = new Label();
@@ -43,12 +44,17 @@
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            comboBox1 = new ComboBox();
-            label8 = new Label();
-            textBox1 = new TextBox();
-            label6 = new Label();
-            pictureBox10 = new PictureBox();
+            comboBoxEdit1 = new ReaLTaiizor.Controls.ComboBoxEdit();
+            button2 = new Button();
+            button1 = new Button();
+            label7 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            textBox4 = new TextBox();
+            textBox2 = new TextBox();
+            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -57,13 +63,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
             panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(pictureBox13);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(label4);
@@ -79,6 +85,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(223, 666);
             panel1.TabIndex = 2;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.BackgroundImage = (Image)resources.GetObject("pictureBox13.BackgroundImage");
+            pictureBox13.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox13.Location = new Point(90, 575);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(55, 49);
+            pictureBox13.TabIndex = 24;
+            pictureBox13.TabStop = false;
+            pictureBox13.Click += pictureBox13_Click;
             // 
             // label5
             // 
@@ -210,94 +227,164 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(47, 77);
+            dataGridView1.Location = new Point(47, 20);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(834, 372);
+            dataGridView1.Size = new Size(834, 362);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel2
             // 
             panel2.BackColor = Color.MediumPurple;
-            panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(label6);
+            panel2.Controls.Add(comboBoxEdit1);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(label10);
+            panel2.Controls.Add(textBox4);
+            panel2.Controls.Add(textBox2);
             panel2.Controls.Add(dataGridView1);
             panel2.Location = new Point(267, 50);
             panel2.Name = "panel2";
             panel2.Size = new Size(920, 488);
             panel2.TabIndex = 4;
             // 
-            // comboBox1
+            // comboBoxEdit1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(259, 43);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(206, 23);
-            comboBox1.TabIndex = 14;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            comboBoxEdit1.BackColor = Color.FromArgb(246, 246, 246);
+            comboBoxEdit1.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxEdit1.DropDownHeight = 100;
+            comboBoxEdit1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEdit1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxEdit1.ForeColor = Color.FromArgb(142, 142, 142);
+            comboBoxEdit1.FormattingEnabled = true;
+            comboBoxEdit1.HoverSelectionColor = Color.FromArgb(241, 241, 241);
+            comboBoxEdit1.IntegralHeight = false;
+            comboBoxEdit1.ItemHeight = 20;
+            comboBoxEdit1.Items.AddRange(new object[] { "Sale", "Salary", "Freelancing", "Transfer", "Little Job", "Rental", "Investment", "Crypto", "Gift", "Pension" });
+            comboBoxEdit1.Location = new Point(224, 423);
+            comboBoxEdit1.Name = "comboBoxEdit1";
+            comboBoxEdit1.Size = new Size(206, 26);
+            comboBoxEdit1.StartIndex = 0;
+            comboBoxEdit1.TabIndex = 31;
+            comboBoxEdit1.SelectedIndexChanged += comboBoxEdit1_SelectedIndexChanged;
             // 
-            // label8
+            // button2
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label8.ForeColor = Color.Indigo;
-            label8.Location = new Point(259, 15);
-            label8.Name = "label8";
-            label8.Size = new Size(97, 25);
-            label8.TabIndex = 13;
-            label8.Text = "Category:";
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(637, 404);
+            button2.Name = "button2";
+            button2.Size = new Size(169, 64);
+            button2.TabIndex = 30;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // textBox1
+            // button1
             // 
-            textBox1.ForeColor = SystemColors.InfoText;
-            textBox1.Location = new Point(47, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(206, 23);
-            textBox1.TabIndex = 12;
-            textBox1.TextChanged += textBox1_TextChanged;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(446, 404);
+            button1.Name = "button1";
+            button1.Size = new Size(169, 64);
+            button1.TabIndex = 29;
+            button1.Text = "Update";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // label6
+            // label7
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label6.ForeColor = Color.Indigo;
-            label6.Location = new Point(47, 15);
-            label6.Name = "label6";
-            label6.Size = new Size(135, 25);
-            label6.TabIndex = 11;
-            label6.Text = "Income name:";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label7.ForeColor = Color.Indigo;
+            label7.Location = new Point(121, 421);
+            label7.Name = "label7";
+            label7.Size = new Size(97, 25);
+            label7.TabIndex = 28;
+            label7.Text = "Category:";
             // 
-            // pictureBox10
+            // label9
             // 
-            pictureBox10.BackgroundImage = (Image)resources.GetObject("pictureBox10.BackgroundImage");
-            pictureBox10.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(1190, 12);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(43, 40);
-            pictureBox10.TabIndex = 23;
-            pictureBox10.TabStop = false;
-            pictureBox10.Click += pictureBox10_Click;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label9.ForeColor = Color.Indigo;
+            label9.Location = new Point(131, 453);
+            label9.Name = "label9";
+            label9.Size = new Size(87, 25);
+            label9.TabIndex = 27;
+            label9.Text = "Amount:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label10.ForeColor = Color.Indigo;
+            label10.Location = new Point(77, 395);
+            label10.Name = "label10";
+            label10.Size = new Size(141, 25);
+            label10.TabIndex = 26;
+            label10.Text = "Expense name:";
+            // 
+            // textBox4
+            // 
+            textBox4.ForeColor = SystemColors.InfoText;
+            textBox4.Location = new Point(224, 455);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(206, 23);
+            textBox4.TabIndex = 25;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.ForeColor = SystemColors.InfoText;
+            textBox2.Location = new Point(224, 397);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(206, 23);
+            textBox2.TabIndex = 23;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // nightControlBox1
+            // 
+            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            nightControlBox1.BackColor = Color.Transparent;
+            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
+            nightControlBox1.CloseHoverForeColor = Color.White;
+            nightControlBox1.DefaultLocation = true;
+            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMaximizeButton = true;
+            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMinimizeButton = true;
+            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.Location = new Point(1122, 0);
+            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MaximizeHoverForeColor = Color.White;
+            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MinimizeHoverForeColor = Color.White;
+            nightControlBox1.Name = "nightControlBox1";
+            nightControlBox1.Size = new Size(139, 31);
+            nightControlBox1.TabIndex = 31;
             // 
             // ViewIncome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(1245, 625);
-            Controls.Add(pictureBox10);
+            ClientSize = new Size(1245, 665);
+            Controls.Add(nightControlBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Cursor = Cursors.IBeam;
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewIncome";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewIncome";
             Load += ViewIncome_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -307,7 +394,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -327,10 +413,15 @@
         private PictureBox pictureBox1;
         private DataGridView dataGridView1;
         private Panel panel2;
-        private ComboBox comboBox1;
-        private Label label8;
-        private TextBox textBox1;
-        private Label label6;
-        private PictureBox pictureBox10;
+        private PictureBox pictureBox13;
+        private Button button2;
+        private Button button1;
+        private Label label7;
+        private Label label9;
+        private Label label10;
+        private TextBox textBox4;
+        private TextBox textBox2;
+        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
+        private ReaLTaiizor.Controls.ComboBoxEdit comboBoxEdit1;
     }
 }

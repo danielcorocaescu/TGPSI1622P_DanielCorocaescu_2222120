@@ -81,12 +81,11 @@ namespace CashControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string ExpenseName = textBox1.Text; // Nome do campo correspondente ao nome do rendimento
+            string ExpenseName = textBox1.Text;
             decimal ExpenseAmount;
-            string ExpenseCategory = comboBox1.SelectedItem?.ToString(); // Combobox para a categoria do rendimento
-            DateTime ExpenseDate = dateTimePicker1.Value; // DateTimePicker para a data do rendimento
+            string ExpenseCategory = comboBox1.SelectedItem?.ToString();
+            DateTime ExpenseDate = dateTimePicker1.Value;
 
-            // Verificar se todos os campos estão preenchidos e se os valores são válidos
             if (string.IsNullOrEmpty(ExpenseName) ||
                 string.IsNullOrEmpty(textBox2.Text) ||
                 !decimal.TryParse(textBox2.Text, out ExpenseAmount) ||
@@ -106,8 +105,8 @@ namespace CashControl
 
                 try
                 {
-                    // Inserir na tabela Income
-                    string insertExpensesQuery = "INSERT INTO Income (ExpenseName, ExpenseAmount, ExpenseCategory, ExpenseDate, ExpenseUser) VALUES (@IncomeName, @IncomeAmount, @IncomeCategory, @IncomeDate)";
+                    // Inserir na tabela Expenses
+                    string insertExpensesQuery = "INSERT INTO Expenses (ExpenseName, ExpenseAmount, ExpenseCategory, ExpenseDate, ExpenseUser) VALUES (@ExpenseName, @ExpenseAmount, @ExpenseCategory, @ExpenseDate, @ExpenseUser)";
                     using (SqlCommand cmd = new SqlCommand(insertExpensesQuery, conn, transaction))
                     {
                         cmd.Parameters.AddWithValue("@ExpenseName", ExpenseName);
@@ -120,13 +119,13 @@ namespace CashControl
 
                     // Commitar a transação
                     transaction.Commit();
-                    MessageBox.Show("Income registrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Expense registrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     // Rollback em caso de erro
                     transaction.Rollback();
-                    MessageBox.Show($"Erro ao registrar o income: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Erro ao registrar o Expense: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -163,6 +162,12 @@ namespace CashControl
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Account account = new Account();
+            account.Show();
         }
     }
 }
