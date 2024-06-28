@@ -375,6 +375,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewExpenses";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewExpenses";
             Load += ViewExpenses_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();

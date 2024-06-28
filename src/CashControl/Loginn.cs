@@ -28,6 +28,7 @@ namespace CashControl
         {
             RegisterUser Register = new RegisterUser();
             Register.Show();
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

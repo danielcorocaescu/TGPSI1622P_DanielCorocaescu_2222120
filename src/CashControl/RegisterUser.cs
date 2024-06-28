@@ -30,6 +30,7 @@ namespace CashControl
         {
             Loginn LoginForm = new Loginn();
             LoginForm.Show();
+            this.Hide();
         }
 
 
@@ -107,6 +108,7 @@ namespace CashControl
 
                     Loginn loginn = new Loginn();
                     loginn.Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
