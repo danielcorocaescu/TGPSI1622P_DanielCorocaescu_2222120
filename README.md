@@ -1,17 +1,6 @@
 # TGPSI1622P_DanielCorocaescu_2222120
 CashControl
 
-Table of Contents
-Description
-Technologies
-How To Use
-Implementation
-Development Timeline
-Technical Aspects
-References
-License
-Author Info
-Description
 CashControl is a personal financial management application designed to help users record, view, edit, and delete incomes and expenses. The application is built using C# and Windows Forms, with a backend database managed by SQL Server (SSMS). The primary language of the application is English.
 
 Technologies
