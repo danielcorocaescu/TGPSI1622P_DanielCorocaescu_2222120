@@ -4,12 +4,6 @@ CashControl
 🇬🇧
 CashControl is a personal financial management application designed to help users record, view, edit, and delete incomes and expenses. The application is built using C# and Windows Forms, with a backend database managed by SQL Server (SSMS). The primary language of the application is English.
 
-Technologies
-Programming Language: C#
-Framework: Windows Forms
-Database: SQL Server (SSMS)
-IDE: Visual Studio
-How To Use
 To use this application, follow these steps:
 
 Clone the repository to your local machine.
@@ -21,8 +15,9 @@ Implementation
 Development Timeline
 
 User Interface Examples:
-Login: Mandatory login screen for all users.
-Dashboard: Displays total incomes, total expenses, number of transactions.
+Login.cs: Mandatory login screen for all users.
+Register.cs: Click on "Don´t have an account? Create one" on Login form and then register your account.
+Dashboard.cs: Displays total incomes, total expenses, number of transactions.
 Income.cs: Record incomes (IncomeName, IncomeCategory, IncomeAmount, IncomeDate).
 Expenses.cs: Record expenses (ExpenseName, ExpenseCategory, ExpenseAmount, ExpenseDate).
 ViewExpenses.cs: View, edit, and delete expenses.
@@ -32,14 +27,8 @@ Account.cs: View account details and change email and phone number.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🇵🇹
-CashControl é um aplicativo de gerenciamento financeiro pessoal desenvolvido para ajudar os usuários a registrar, visualizar, editar e excluir receitas e despesas. A aplicação é construída em C# e Windows Forms, com banco de dados backend gerenciado por SQL Server (SSMS). O idioma principal do aplicativo é o inglês.
+CashControl é um aplicativo de gerenciamento financeiro pessoal desenvolvido para ajudar os utilizadores a registrar, visualizar, editar e excluir receitas e despesas. A aplicação é construída em C# e Windows Forms, com banco de dados SQL Server (SSMS). O idioma principal do aplicativo é o inglês.
 
-Tecnologias
-Linguagem de programação: C#
-Estrutura: Windows Forms
-Banco de dados: SQL Server (SSMS)
-Ambiente de desenvolvimento integrado: Visual Studio
-Como usar
 Para usar este aplicativo, siga estas etapas:
 
 Clone o repositório em sua máquina local.
@@ -51,8 +40,9 @@ Implementação
 Cronograma de Desenvolvimento
 
 Exemplos de interface do usuário:
-Login: Tela de login obrigatória para todos os usuários.
-Dashboard: Exibe receitas totais, despesas totais, número de transações.
+Login.cs: Tela de login obrigatória para todos os utilizadores.
+Register.cs: Clique em "Don´t have an account? Create one" no formulário de Login e depois cadastre sua conta.
+Dashboard.cs: Exibe receitas totais, despesas totais, número de transações.
 Income.cs: Registre receitas (IncomeName, IncomeCategory, IncomeAmount, IncomeDate).
 Expenses.cs: Registre despesas (ExpenseName, ExpenseCategory, ExpenseAmount, ExpenseDate).
 ViewExpenses.cs: visualize, edite e exclua despesas.
