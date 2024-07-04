@@ -7,6 +7,7 @@ CashControl
 ### To use this application, follow these steps:
 ```
 ### Clone the repository to your local machine.
+### Clone the database (its on the file, open with SSMS (Sql Server Management Studio)
 ### Open the solution file in Visual Studio.
 ### Build and run the application.
 ### Use the login screen to access the main dashboard.
@@ -33,6 +34,7 @@ CashControl
 ### Para usar este aplicativo, siga estas etapas:
 ````
 ### Clone o repositório em sua máquina local.
+### Clone a base de dados (está no ficheiro, abra com SSMS (Sql Server Management Studio)
 ### Abra o arquivo de solução no Visual Studio.
 ### Crie e execute o aplicativo.
 ### Use a tela de login para acessar o painel principal.
