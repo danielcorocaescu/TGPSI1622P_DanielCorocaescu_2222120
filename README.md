@@ -29,6 +29,8 @@ ViewExpenses.cs: View, edit, and delete expenses.
 ViewIncome.cs: View, edit, and delete incomes.
 Account.cs: View account details and change email and phone number.
 
+
+
 🇵🇹
 CashControl é um aplicativo de gerenciamento financeiro pessoal desenvolvido para ajudar os usuários a registrar, visualizar, editar e excluir receitas e despesas. A aplicação é construída em C# e Windows Forms, com banco de dados backend gerenciado por SQL Server (SSMS). O idioma principal do aplicativo é o inglês.
 
