@@ -28,6 +28,3 @@ ViewExpenses.cs: View, edit, and delete expenses.
 ViewIncome.cs: View, edit, and delete incomes.
 Account.cs: View account details and change email and phone number.
 
-
-Author Info
-Daniel Alexandre Corocaescu, nº2222120
