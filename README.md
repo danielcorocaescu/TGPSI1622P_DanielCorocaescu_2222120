@@ -29,7 +29,7 @@ CashControl
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🇵🇹
-### CashControl é um aplicativo de gerenciamento financeiro pessoal desenvolvido para ajudar os utilizadores a registrar, visualizar, editar e excluir receitas e despesas. A aplicação é construída em C# e Windows Forms, com banco de dados SQL Server (SSMS). O idioma principal do aplicativo é o inglês.
+### CashControl é um aplicativo de gerenciamento financeiro pessoal desenvolvido para ajudar os utilizadores a registrar, visualizar, editar e excluir receitas e despesas. A aplicação é construída em C# e Windows Forms, com base de dados SQL Server (SSMS). O idioma principal do aplicativo é o inglês.
 
 ### Para usar este aplicativo, siga estas etapas:
 ````
